@@ -1,1 +1,1 @@
-
+This is a webpage where you can record your expense, hence it is at its initila stage so feel free to add any features to it.

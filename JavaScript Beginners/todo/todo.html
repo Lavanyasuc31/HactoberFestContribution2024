@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-do List</title>
+    <link rel="stylesheet" href="todo.css">
+    <link rel = "shortcut icon" href = "/icons/icon.png" type = "image/x-icon">
+
+    
+</head>
+<body>
+    <div class="container">
+        <div class="todo-app">
+            <h2>To-Do List <img src="/icons/icon.png" alt="todo icon"></h2>
+            <div class="row">
+                <input type="text" name="search" id="input-box" autofocus  placeholder="Add your Task">
+                <button onclick="addTask()" id="addt">Add Task</button>
+            </div>
+            <div class="statsalone">
+                <ul class="stats">
+                    <li class="counter">
+                        <span>Remaining</span>
+                        <span id="remaining-tasks" class="num">0</span>
+                    </li>
+                    <li class="counter">
+                        <span>Completed</span>
+                        <span id="completed-tasks" class="num">0</span>
+                    </li>
+                    <li class="counter">
+                        <span>Total</span>
+                        <span id="total-tasks" class="num">0</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="list">
+                
+            <ul id="list-container">
+                <!--<li class="checked">task 1</li>
+                <li>task 2</li>
+                <li>task 3</li>-->
+            </ul>
+            </div>
+        </div>
+    </div>
+    <script src="todo.js"></script>
+</body>
+</html>

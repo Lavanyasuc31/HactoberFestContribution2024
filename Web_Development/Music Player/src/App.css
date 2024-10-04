@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+#root{
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-color: blueviolet;
+  font-family: "Outfit", system-ui;
+}
+
+
+.songlist{
+  transition: 0.5s;
+}
+.song:hover{
+  transform: scale(1.03);
+}
+
+

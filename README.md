@@ -4,8 +4,76 @@
 [![Star this Repo](https://img.shields.io/github/stars/Lavanyasuc31/HactoberFestContribution2024?style=social)](https://github.com/Lavanyasuc31/HactoberFestContribution2024)
 
 Hey there, awesome people! 👋 Welcome to **HacktoberFest 2024**! 🚀 This is a fun and beginner-friendly repository designed for you to make your very first Pull Request (PR) and join the world of open source! 🌍✨ 
+<div align = "center">
+<br>
+
+<table align="center">
+    <thead align="center">
+        <tr border: 1px;>
+            <td><b>🌟 Stars</b></td>
+            <td><b>🍴 Forks</b></td>
+            <td><b>🐛 Issues</b></td>
+            <td><b>🔔 Open PRs</b></td>
+            <td><b>🔕 Close PRs</b></td>
+            <td><b>🛠 Languages</b></td>
+            <td><b>🌐 Contributors </b></td>
+        </tr>
+     </thead>
+    <tbody>
+         <tr>
+            <td><img alt="Stars" src="https://img.shields.io/github/stars/Lavanyasuc31/HactoberFestContribution2024?style=flat&logo=github"/></td>
+            <td><img alt="Forks" src="https://img.shields.io/github/forks/Lavanyasuc31/HactoberFestContribution2024?style=flat&logo=github"/></td>
+            <td><img alt="Issues" src="https://img.shields.io/github/issues/Lavanyasuc31/HactoberFestContribution2024?style=flat&logo=github"/></td>
+            <td><img alt="Open Pull Requests" src="https://img.shields.io/github/issues-pr/Lavanyasuc31/HactoberFestContribution2024?style=flat&logo=github"/></td>
+           <td><img alt="Close Pull Requests" src="https://img.shields.io/github/issues-pr-closed/Lavanyasuc31/HactoberFestContribution2024?style=flat&color=critical&logo=github"/></td>
+           <td><img alt="GitHub language count" src="https://img.shields.io/github/languages/count/Lavanyasuc31/HactoberFestContribution2024?style=flat&color=critical&logo=github"></td>
+           <td><img alt="GitHub contributors" src="https://img.shields.io/github/contributors/Lavanyasuc31/HactoberFestContribution2024?color=2b9348"></td>
+        </tr>
+    </tbody>
+</table>
+</div>
+<br>
+
+
+## Table of Contents
+- [Featured In](#featured-in)
+- [🍁 What is Hacktoberfest?](#-what-is-hacktoberfest)
+  - [🏆 How to Win Swag](#-how-to-win-swag)
+- [🚀 How to Contribute to This Repo](#-how-to-contribute-to-this-repo)
+  - [🛠 Steps to Contribute](#-steps-to-contribute)
+- [💡 Why Contribute?](#-why-contribute)
+- [🌈 Join the Fun – Follow Me!](#-join-the-fun--follow-me)
+- [Contributors](#contributors)
+- [Stargazers](#stargazers)
+- [Forkers](#forkers)
+- [🤩 Helpful Resources](#-helpful-resources)
+- [🎯 Let’s Get Started!](#-lets-get-started)
+
 
 ---
+## 🚀Featured In
+
+<table>
+
+   <tr>
+      <th>Event Logo</th>
+      <th>Event Name</th>
+      <th>Event Description</th>
+   </tr>
+   <tr>
+      <td><img src="./GSSOC24.jpg" width="200" height="auto" loading="lazy" alt="GSSoC 24"/></td>
+      <td>GirlScript Summer of Code 2024</td>
+      <td>GirlScript Summer of Code is a three-month-long Open Source Program conducted every summer by GirlScript Foundation. It is an initiative to bring more beginners to Open-Source Software Development.</td>
+   </tr>
+    <tr>
+      <td><img src="HACKTOBER.jpg" width="200" height="auto" loading="lazy" alt="Hacktoberfest 2024"/></td>
+      <td>Hacktoberfest 2024</td>
+      <td>Hacktoberfest is a month-long celebration of open source software run by DigitalOcean, GitHub, and Twilio. It encourages contributions to open source projects and promotes a global community of developers.</td>
+   </tr>
+
+</table>
+
+<br />
 
 ## 🍁 What is Hacktoberfest?
 
@@ -80,6 +148,36 @@ If you find this repository helpful, don’t forget to **give it a star ⭐** an
 ![Follow Me](https://img.shields.io/github/followers/Lavanyasuc31?label=Follow&style=social)
 
 ---
+## Contributors
+
+A heartfelt thank you to the following individuals for their valuable contributions to this project. Your support and dedication are greatly appreciated:
+
+<a href="https://github.com/Lavanyasuc31/HactoberFestContribution2024/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Lavanyasuc31/HactoberFestContribution2024" />
+</a>
+
+<br>
+
+## Stargazers
+
+<div align='center'>
+
+[![Stargazers repo roster for @Lavanyasuc31/HactoberFestContribution2024](https://reporoster.com/stars/Lavanyasuc31/HactoberFestContribution2024)](https://github.com/Lavanyasuc31/HactoberFestContribution2024/stargazers)
+
+</div>
+
+## Forkers
+<div align='center'>
+
+[![Forkers repo roster for @Lavanyasuc31/HactoberFestContribution2024](https://reporoster.com/forks/Lavanyasuc31/HactoberFestContribution2024)](https://github.com/Lavanyasuc31/HactoberFestContribution2024/network/members)
+
+</div>
+
+<div align="center">
+    <a href="#top">
+        <img src="https://img.shields.io/badge/Back%20to%20Top-000000?style=for-the-badge&logo=github&logoColor=white" alt="Back to Top">
+    </a>
+</div>
 
 ## 🤩 Helpful Resources
 
@@ -94,4 +192,9 @@ If you find this repository helpful, don’t forget to **give it a star ⭐** an
 We can’t wait to see your amazing projects! 🚀 Whether you’re submitting your first PR or your hundredth, this is the place to share, collaborate, and grow. Let’s make this **Hacktoberfest 2024** the best one yet! 🎃🎉
 
 ---
+<div align="center">
+    <a href="#top">
+        <img src="https://img.shields.io/badge/Back%20to%20Top-000000?style=for-the-badge&logo=github&logoColor=white" alt="Back to Top">
+    </a>
+</div>
 

@@ -3,46 +3,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To-do List</title>
+    <title>Task Manager</title>
     <link rel="stylesheet" href="todo.css">
-    <link rel = "shortcut icon" href = "/icons/icon.png" type = "image/x-icon">
-
-    
 </head>
 <body>
     <div class="container">
-        <div class="todo-app">
-            <h2>To-Do List <img src="/icons/icon.png" alt="todo icon"></h2>
-            <div class="row">
-                <input type="text" name="search" id="input-box" autofocus  placeholder="Add your Task">
-                <button onclick="addTask()" id="addt">Add Task</button>
-            </div>
-            <div class="statsalone">
-                <ul class="stats">
-                    <li class="counter">
-                        <span>Remaining</span>
-                        <span id="remaining-tasks" class="num">0</span>
-                    </li>
-                    <li class="counter">
-                        <span>Completed</span>
-                        <span id="completed-tasks" class="num">0</span>
-                    </li>
-                    <li class="counter">
-                        <span>Total</span>
-                        <span id="total-tasks" class="num">0</span>
-                    </li>
-                </ul>
-            </div>
-            <div class="list">
-                
-            <ul id="list-container">
-                <!--<li class="checked">task 1</li>
-                <li>task 2</li>
-                <li>task 3</li>-->
-            </ul>
-            </div>
+        <h1>Task Manager</h1>
+        
+        <div class="input-section">
+            <input type="text" id="input-box" placeholder="Add a new task...">
+            <button id="add-task-btn">Add Task</button>
+        </div>
+        
+        <div class="total-tasks">
+            <h3>Total Tasks: <span id="total-tasks">0</span></h3>
+            <h3>Completed Tasks: <span id="completed-tasks">0</span></h3>
+            <h3>Remaining Tasks: <span id="remaining-tasks">0</span></h3>
+        </div>
+        
+        <div class="task-list">
+            <h3>Your Tasks</h3>
+            <ul id="list-container"></ul>
+        </div>
+
+        <div class="completed-tasks">
+            <h3>Completed Tasks</h3>
+            <ul id="completed-list"></ul>
         </div>
     </div>
-    <script src="todo.js"></script>
+
+    <script>
+        // Selecting DOM elements
+        const inputBox = document.getElementById("input-box");
+        const listContainer = document.getElementById("list-container");
+        const completedList = document.getElementById("completed-list");
+        const totalTasks = document.querySelector('#total-tasks');
+        const completedTasks = document.querySelector('#completed-tasks');
+        const remainingTasks = document.querySelector('#remaining-tasks');
+        const addTaskBtn = document.getElementById('add-task-btn');
+
+        // Function to create a new task
+        function createTaskElement(taskText) {
+            let li = document.createElement("li");
+            li.classList.add('unchecked');
+            
+            let taskContent = document.createElement("span");
+            taskContent.className = 'task-content';
+            taskContent.innerHTML = taskText;
+            li.appendChild(taskContent);
+
+            // Complete button
+            let completeButton = document.createElement('button');
+            completeButton.textContent = '✓';
+            completeButton.className = 'complete-btn';
+            li.appendChild(completeButton);
+
+            // Delete button
+            let deleteButton = document.createElement('span');
+            deleteButton.innerHTML = "\u00d7";
+            deleteButton.className = 'delete-btn';
+            li.appendChild(deleteButton);
+
+            return li;
+        }
+
+        // Function to add a task
+        function addTask() {
+            const taskText = inputBox.value.trim(); // Trim to avoid empty spaces
+            if (taskText === '') {
+                alert("You must write something!");
+            } else {
+                const newTask = createTaskElement(taskText);
+                listContainer.appendChild(newTask); // Add task to the main task list
+                inputBox.value = ""; // Clear the input box
+                countTasks(); // Update the task count
+            }
+        }
+
+        // Function to update task counts
+        function countTasks() {
+            const totalTasksCount = listContainer.getElementsByTagName('li').length + completedList.getElementsByTagName('li').length;
+            const completedTasksCount = completedList.getElementsByTagName('li').length;
+            const remainingTasksCount = listContainer.getElementsByTagName('li').length;
+
+            totalTasks.textContent = totalTasksCount;
+            completedTasks.textContent = completedTasksCount;
+            remainingTasks.textContent = remainingTasksCount;
+        }
+
+        // Event listener for adding tasks on Enter key press
+        inputBox.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') {
+                addTask();
+            }
+        });
+
+        
+        addTaskBtn.addEventListener('click', addTask);
+
+        
+        document.addEventListener("click", (e) => {
+            if (e.target.classList.contains("complete-btn")) {
+                const taskItem = e.target.parentElement;
+                const taskContent = taskItem.querySelector('.task-content').textContent;
+                const dateCompleted = new Date().toLocaleString();
+
+                taskItem.classList.toggle("checked");
+
+                if (taskItem.classList.contains("checked")) {
+                    // Move task to the completed list with timestamp
+                    const completedTask = createTaskElement(taskContent);
+                    const timestamp = document.createElement("span");
+                    timestamp.className = 'timestamp';
+                    timestamp.textContent = ` (Completed on: ${dateCompleted})`;
+                    completedTask.appendChild(timestamp); 
+                    
+                    completedList.appendChild(completedTask); // Move to completed list
+                    taskItem.remove(); // Remove from the original list
+                } else {
+                    // Move back to task list if unchecked
+                    const originalTask = createTaskElement(taskContent);
+                    listContainer.appendChild(originalTask); // Move back to main list
+                    e.target.parentElement.remove();
+                }
+                countTasks();
+            } else if (e.target.classList.contains("delete-btn")) {
+                const taskItem = e.target.parentElement;
+                taskItem.remove();
+                countTasks(); 
+            }
+        });
+    </script>
 </body>
 </html>

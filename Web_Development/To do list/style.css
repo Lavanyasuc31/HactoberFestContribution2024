@@ -1,0 +1,78 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.container
+{
+    width: 100%;
+    min-height: 100vh;
+    padding: 10px;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(1,190,241,1) 93%, rgba(0,212,255,1) 100%);
+}
+.todolist
+{
+    width:100%;
+    max-width: 500px;
+    margin: 100px auto 20px;
+    padding: 30px ;
+    border-radius: 10px;
+    background-color: aliceblue;
+}
+.top
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+
+}
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+    background: #cbcdd2;
+}
+input
+{
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 500;
+}
+button{
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background: #ff5945;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+}
+  .todos {
+    margin-top: 2em;
+  }
+  
+  .todo {
+    border-left: 4px solid #ec5766;
+    padding: 5px;
+    color: rgb(75, 75, 75);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2em;
+    margin-bottom: 1em;
+  }
+  
+  .delete {
+    color: #d91e36;
+    cursor: pointer;
+  }

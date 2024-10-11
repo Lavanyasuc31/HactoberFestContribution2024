@@ -1,0 +1,97 @@
+<div class="profile-header text-center" id="container">
+    <!-- Profile Image -->
+    <img src="{{ user.profile.avatar }}" alt="Profile Image" class="profile-img">
+
+    <!-- Editable Profile Information Form -->
+    <form action="{% url 'edit-profile' %}" method="POST">
+        {% csrf_token %}
+        <div class="profile-info">
+            <!-- Username Field (Readonly) -->
+            <h3>@{{ user.username }}</h3>
+
+            <!-- Display Name Field -->
+            <div class="mb-3">
+                <label for="displayname">Display Name:<span>{{ user.profile.displayname }}</span></label>
+                <input
+                    type="text"
+                    id="displayname"
+                    name="displayname"
+                    class="form-control"
+                    value="{{ user.profile.displayname }}"
+                    required
+                />
+            </div>
+
+            <!-- Phone Number Field -->
+            <div class="mb-3">
+                <label for="phone_number">Phone Number:</label>
+                <input
+                    type="text"
+                    id="phone_number"
+                    name="phone_number"
+                    class="form-control"
+                    value="{{ user.profile.phone_number }}"
+                />
+            </div>
+
+            <!-- Age Field -->
+            <div class="mb-3">
+                <label for="age">Age:</label>
+                <input
+                    type="number"
+                    id="age"
+                    name="age"
+                    class="form-control"
+                    value="{{ user.profile.age }}"
+                />
+            </div>
+
+            <!-- Preferred Job Title Field -->
+            <div class="mb-3">
+                <label for="preferred_job_title">Preferred Job Title:</label>
+                <input
+                    type="text"
+                    id="preferred_job_title"
+                    name="preferred_job_title"
+                    class="form-control"
+                    value="{{ user.profile.preferred_job_title }}"
+                />
+            </div>
+
+            <!-- Preferred Job Type Field -->
+            <div class="mb-3">
+                <label for="preferred_job_type">Preferred Job Type:</label>
+                <select
+                    id="preferred_job_type"
+                    name="preferred_job_type"
+                    class="form-control"
+                >
+                    <option value="full_time" {% if profile.preferred_job_type == 'full_time' %}selected{% endif %}>
+                        Full Time
+                    </option>
+                    <option value="part_time" {% if profile.preferred_job_type == 'part_time' %}selected{% endif %}>
+                        Part Time
+                    </option>
+                    <option value="remote" {% if profile.preferred_job_type == 'remote' %}selected{% endif %}>
+                        Remote
+                    </option>
+                </select>
+            </div>
+
+            <!-- Preferred Job Location Field -->
+            <div class="mb-3">
+                <label for="preferred_job_location">Preferred Job Location:</label>
+                <input
+                    type="text"
+                    id="preferred_job_location"
+                    name="preferred_job_location"
+                    class="form-control"
+                    value="{{ user.profile.preferred_job_location }}"
+                />
+            </div>
+        </div>
+
+        <!-- Save Button -->
+        <button type="submit" class="btn btn-primary edit-btn">Save</button>
+    </form>
+</div>

@@ -1,0 +1,81 @@
+<!-- templates/Job_Alert/profile.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile</title>
+    <!-- Bootstrap CSS -->
+    <script src="https://unpkg.com/htmx.org@1.8.4"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .profile-header {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+        .profile-info h3 {
+            margin-top: 10px;
+        }
+        .profile-info p {
+            font-size: 1.1em;
+            color: #6c757d;
+        }
+        .edit-btn {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="profile-header text-center" id="container">
+                <!-- Profile Image -->
+                <img src="{{ profile.avatar }}" alt="Profile Image" class="profile-img">
+
+                <!-- Profile Information -->
+                <div class="profile-info">
+                    <h3>@{{ profile.user.username }}</h3>
+                    <p>Username: {{ profile.displayname}}</p>
+                    <!--<p>Email: {{ profile.user.email }}</p> -->
+                    <p>Phone Number: {{ profile.phone_number }}</p>
+                    <p>Age: {{ profile.age }}</p>
+                    <p>Preferred Job Title: {{ profile.preferred_job_title }}</p>
+                    <p>Preferred Job Type: 
+                        {% if profile.preferred_job_type == 'full_time' %}
+                            Full Time
+                        {% elif profile.preferred_job_type == 'part_time' %}
+                            Part Time
+                        {% else %}
+                            Remote
+                        {% endif %}
+                    </p>
+                    <p>Preferred Job Location: {{ profile.preferred_job_location }}</p>
+                </div>
+
+                <!-- Edit Profile Button -->
+                <form hx-get="{% url 'edit-profile' %}" hx-target="#container" hx-swap="outerHTML">
+                    <button type="submit" class="btn btn-primary edit-btn">Edit Profile</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS and dependencies -->
+<!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body> -->
+</html>

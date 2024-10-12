@@ -1,128 +1,89 @@
-*{
+body { 
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
     margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-    box-sizing: border-box;
+    padding: 20px;
 }
-.container{
-    width: 100%;
-    min-height: 100vh;
-    background: linear-gradient(120deg, #32508e, #643e3a);
-    padding: 10px;
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    background: linear-gradient(135deg, #0f2027, #2c5364, #f09819); /* Bold vibrant gradient */
+    padding: 20px;
+    border-radius: 15px;  /* Rounded corners for a smoother appearance */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);  /* Soft shadow for a 3D effect */
+    color: white; /* Make the text inside the container stand out against the gradient */
 }
-.todo-app{
-    width: 100%;
-    max-width: 540px;
-    background: white;
-    margin: 100px auto 20px;
-    padding: 40px 30px 70px;
-    border-radius: 16px;
-}
-.todo-app h2{
-    color: #002765;
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
+
+h1 {
     text-align: center;
-    justify-content: center;
+    color: #f9f9f9;  /* High contrast text color */
 }
-.todo-app h2 img{
-    width: 30px;
-    margin-left: 10px;
-}
-.row{
+
+.input-section {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    background: #edeef0;
-    border-radius: 35px;
-    padding-left: 20px;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
-input{
-    flex: 1;
-    border: none;
-    outline: none;
-    background: transparent;
+
+input[type="text"] {
+    width: 70%;
     padding: 10px;
-    font-weight: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: #333; /* Darker text for contrast */
 }
-button{
+
+button {
+    padding: 10px 15px;
+    background-color: #ff6f61;
+    color: white;
     border: none;
-    outline: none;
-    padding: 16px 50px;
-    background: #ff5945;
-    color: #fff;
-    font-size: 16px;
+    border-radius: 5px;
     cursor: pointer;
-    border-radius: 40px;
-
-}
-.list ul li{
-    list-style: none;
-    font-size: 17px;
-    padding: 12px 8px 12px 50px;
-    cursor: pointer;
-    user-select: none;
-    position: relative;
-}
-.list ul li::before{
-    content: '';
-    position: absolute;
-    height: 28px;
-    width: 28px;
-    border-radius: 50%;
-    background-image: url(/icons/unchecked.png);
-    background-size: cover;
-    background-position: center;
-    top: 12px;
-    left: 8px;
-}
-.list ul li.checked{
-    color: #555;
-    text-decoration: line-through;
-}
-.list ul li.checked::before{
-    background-image: url(/icons/checked.png);
-}
-.list ul li span{
-    position: absolute;
-    right: 0;
-    top: 5px;
-    width: 40px;
-    height: 40px;
-    font-size: 22px;
-    color: #555;
-    line-height: 40px;
-    text-align: center;
-    border-radius: 50%;
-}
-.list ul li span:hover{
-    background: #edeef0;
 }
 
-.stats{
+button:hover {
+    background-color: #e65c54;
+}
+
+.task-list, .completed-tasks {
+    margin-top: 20px;
+}
+
+ul {
     list-style-type: none;
-    gap: 0px;
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-end;
+    padding: 0;
 }
-.stats li{
+
+li {
+    background: #ffffff;
+    margin: 5px 0;
+    padding: 10px;
     display: flex;
-    background: #061B25;
-    color: #A4D0E3;
-    gap: 8px;
-    border-radius: 8px;
-    margin-top: 10px;
-}
-.stats span{
-    padding: 6px 10px;
+    justify-content: space-between;
     align-items: center;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  /* Subtle shadow for list items */
 }
-.num{
-    color: #FFFFFF;
-    background: #1C89B8;
-    padding: 4px 8px;
-    border-radius: 0 6px 6px 0;
+
+.complete-btn {
+    background-color: #1c89b8;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px 10px;
+    margin-right: 10px;
+}
+
+.complete-btn:hover {
+    background-color: #166586;
+}
+
+span {
+    cursor: pointer;
+    color: #ff5959;
+    font-weight: bold;
+    margin-left: 10px;
 }

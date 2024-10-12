@@ -4,8 +4,6 @@
 
 File Size Converter is a web application that allows users to easily convert file sizes between different units of measurement. It provides a simple, intuitive interface for converting file sizes from bytes to larger units like kilobytes, megabytes, gigabytes, and beyond.
 
-![File Size Converter Screenshot](https://source.unsplash.com/random/800x400?computer+file)
-
 ## Features
 
 - Convert file sizes between multiple units (B, KB, MB, GB, TB, PB, EB, ZB, YB)
@@ -32,43 +30,6 @@ You can try out the live version of the File Size Converter here: [https://curio
 
 - Node.js (v14 or later)
 - npm (v6 or later)
-
-### Installation
-
-1. Clone the repository:
-   ```
-   git clone https://github.com/ianshulx/React-projects-for-beginners/tree/main/file-size-converter.git
-   ```
-
-2. Navigate to the project directory:
-   ```
-   cd file-size-converter
-   ```
-
-3. Install the dependencies:
-   ```
-   npm install
-   ```
-
-### Running the Application
-
-To start the development server:
-
-```
-npm run dev
-```
-
-This will start the application on `http://localhost:5173` (or another port if 5173 is in use).
-
-### Building for Production
-
-To create a production build:
-
-```
-npm run build
-```
-
-This will generate optimized files in the `dist` directory.
 
 ## Usage
 

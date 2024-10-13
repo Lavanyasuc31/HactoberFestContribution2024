@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator app</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+
+<form name="calculator">
+    <table>
+      <tr>
+        <td colspan="4"><input type="text" name="display" id="display" disabled></td>
+      </tr>
+  
+      <tr>
+        <td><input class="btn" type="button" name="one" value="1" onclick="calculator.display.value  += '1' "></td>
+        <td><input class="btn" type="button" name="two" value="2" onclick="calculator.display.value  += '2' "></td>
+        <td><input class="btn" type="button" name="three" value="3" onclick="calculator.display.value  += '3' "></td>
+        <td><input class="btn" class="operator" type="button" name="plus" value="+" onclick="calculator.display.value  += '+' "></td>
+      </tr>
+  
+      <tr>
+        <td><input class="btn" type="button" name="four" value='4' onclick="calculator.display.value  += '4' "></td>
+        <td><input class="btn" type="button" name="five" value="5" onclick="calculator.display.value  += '5' "></td>
+        <td><input class="btn" type="button" name="six" value="6" onclick="calculator.display.value  += '6' "></td>
+        <td><input class="btn" class="operator" type="button" name="minus" value="-" onclick="calculator.display.value  += '-' "></td>
+      </tr>
+  
+      <tr>
+        <td><input class="btn" type="button" name="seven" value='7' onclick="calculator.display.value  += '7' "></td>
+        <td><input class="btn" type="button" name="eight" value="8" onclick="calculator.display.value  += '8' "></td>
+        <td><input class="btn" type="button" name="nine" value="9" onclick="calculator.display.value  += '9' "></td>
+        <td><input class="btn" class="operator" type="button" name="multiply" value="x" onclick="calculator.display.value  += '*' "></td>
+      </tr>
+  
+      <tr>
+        <td><input class="btn" type="button" id="clear" name="clean" value='C' onclick="calculator.display.value  = '' "></td>
+        <td><input class="btn" type="button" name="zero" value="0" onclick="calculator.display.value  += '0' "></td>
+        <td><input class="btn" id="equal" type="button" name="equal" value="=" onclick="calculator.display.value  = eval(calculator.display.value) "></td>
+        <td><input class="btn" class="operator" type="button" name="divide" value="/" onclick="calculator.display.value  += '/' "></td>
+  
+      </tr>
+  
+      <tr>
+  
+        <td><input class="btn" class="operator" type="button" name="square" value="x2" onclick="calculator.display.value  = eval(Math.pow(calculator.display.value,2)) "></td>
+        <td><input class="btn" class="operator" type="button" name="square" value="x" onclick="calculator.display.value  = eval(Math.sqrt(calculator.display.value)) "></td>
+        <td><input class="btn" class="operator" type="button" name="dot" value="." onclick="calculator.display.value  += '.' "></td>
+        <td><input class="btn" class="operator" type="button" name="square" value="%" onclick="calculator.display.value  = eval(calculator.display.value/100) "></td>
+  
+      </tr>
+    </table>
+  </form>
+</body>
+</html>

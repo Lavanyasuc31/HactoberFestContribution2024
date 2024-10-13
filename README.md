@@ -1,6 +1,6 @@
 ## ⚠️ Note: This repository is no longer accepting pull requests.
 
-Thank you to everyone who has contributed to **HacktoberFest Contribution 2024**! As of now, we are no longer accepting any pull requests. We appreciate your participation and hope you continue contributing to open source projects! 🌟
+Thank you to everyone who has contributed to this repository! As of now, we are no longer accepting any pull requests. We appreciate your participation and hope you continue contributing to open source projects! 🌟
 
 # 🎃 Welcome to **HacktoberFest Contribution 2024**! 🎃  
 [![Hacktoberfest](https://img.shields.io/badge/Hacktoberfest-2024-orange?style=for-the-badge)](https://hacktoberfest.com)  

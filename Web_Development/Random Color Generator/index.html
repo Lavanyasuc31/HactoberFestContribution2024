@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="box">
+    <div class="copy-button">
+      <i class='bx bx-copy'></i>
+    </div>
+    <h2 class="color-code">#fff </h2>
+    <button class="btn">Choose Color</button>
+  </div>
+  <script>
+
+    let randomeCode = "#fff";
+
+    const getColor = () => {
+      const randomeNum = Math.floor(Math.random() * 16777215);
+      randomeCode = "#" + randomeNum.toString(16);
+      document.body.style.background = randomeCode;
+      document.querySelector(".color-code").innerHTML = randomeCode;
+
+    }
+
+    document.querySelector(".btn").addEventListener("click", getColor);
+    const copy = document.querySelector(".copy-button");
+
+    copy.addEventListener("click", function () {
+      navigator.clipboard.writeText(randomeCode);
+      const originalCode = document.querySelector(".color-code").innerHTML;
+      document.querySelector(".color-code").innerHTML = "Copied!!";
+
+      setTimeout(function () {
+        document.querySelector(".color-code").innerHTML = originalCode;
+
+
+      }, 1000);
+    });
+
+    getColor();
+  </script>
+</body>
+
+</html>

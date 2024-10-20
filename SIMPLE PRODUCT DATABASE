@@ -1,0 +1,23 @@
+import sqlite3
+
+# Connect to SQLite database (or create it if it doesn't exist)
+conn = sqlite3.connect('EcoFind.db')
+cursor = conn.cursor()
+
+# Create table for products
+cursor.execute('''
+CREATE TABLE IF NOT EXISTS products (
+    id INTEGER PRIMARY KEY,
+    name TEXT NOT NULL,
+    category TEXT,
+    location TEXT,
+    sustainability_rating INTEGER,
+    review TEXT
+)
+''')
+
+# Commit changes and close connection
+conn.commit()
+conn.close()
+
+print("Database and table created successfully.")

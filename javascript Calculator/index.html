@@ -11,9 +11,10 @@
 
 <form name="calculator">
     <table>
-      <tr>
-        <td colspan="4"><input type="text" name="display" id="display" disabled></td>
-      </tr>
+    <tr>
+      <td colspan="3"><input type="text" name="display" id="display" disabled></td>
+      <td><input class="btn" id="delete" type="button" value="Del" onclick="deleteChar()"></td>
+    </tr>
   
       <tr>
         <td><input class="btn" type="button" name="one" value="1" onclick="calculator.display.value  += '1' "></td>
@@ -47,12 +48,18 @@
       <tr>
   
         <td><input class="btn" class="operator" type="button" name="square" value="x2" onclick="calculator.display.value  = eval(Math.pow(calculator.display.value,2)) "></td>
-        <td><input class="btn" class="operator" type="button" name="square" value="x" onclick="calculator.display.value  = eval(Math.sqrt(calculator.display.value)) "></td>
+        <td><input class="btn" class="operator" type="button" name="square" value="sq" onclick="calculator.display.value  = eval(Math.sqrt(calculator.display.value)) "></td>
         <td><input class="btn" class="operator" type="button" name="dot" value="." onclick="calculator.display.value  += '.' "></td>
         <td><input class="btn" class="operator" type="button" name="square" value="%" onclick="calculator.display.value  = eval(calculator.display.value/100) "></td>
   
       </tr>
     </table>
   </form>
+  <script>
+  function deleteChar() {
+    var disp = document.calculator.display;
+    disp.value = disp.value.slice(0, -1);
+  }
+</script>
 </body>
 </html>

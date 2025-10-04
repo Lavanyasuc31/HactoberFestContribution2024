@@ -30,7 +30,7 @@ body {
   }
   
   input {
-    padding: 10px 30px;
+    padding: 10px 0;
     margin: 15px;
     font-size: 30px;
     display: flex;
@@ -87,4 +87,14 @@ body {
     font-weight: bold;
     box-shadow: 1px 1px 2px 2px goldenrod;
   }
+
+input.btn {
+    min-width: 60px;
+    width: 60px;
+    padding: 10px 0;
+    margin: 10px;
+    font-size: 28px;
+    text-align: center;
+    box-sizing: border-box;
+}
   
